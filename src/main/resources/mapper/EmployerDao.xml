@@ -3,6 +3,6 @@
 <mapper namespace="ru.petshop.company.dao.EmployerDao">
     <sql id="employerColumns">id, name, firstname, lastname, departmentId</sql>
     <select id="findOne" parameterType="int" resultType="Employer">
-        select <include refid="userColumns"/> from employer where id = #{id}
+        select <include refid="employerColumns"/> from employer where id = #{id}
     </select>
 </mapper>
