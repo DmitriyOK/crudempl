@@ -1,6 +1,7 @@
 package ru.petshop.company.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import ru.petshop.company.dao.DepartmentDao;
 import ru.petshop.company.model.Department;
 import ru.petshop.company.service.DepartmentService;
@@ -15,27 +16,25 @@ public class DepartmentServiceImpl implements DepartmentService {
     @Autowired
     DepartmentDao departmentDao;
 
-    @Override
+    @Transactional
     public Integer create(Department department) {
         return departmentDao.create(department);
     }
 
-    @Override
+    @Transactional
     public Integer update(Department department) {
         return departmentDao.update(department);
     }
 
-    @Override
     public Department findOne(int id) {
         return departmentDao.findOne(id);
     }
 
-    @Override
+    @Transactional
     public void delete(int id) {
         departmentDao.delete(id);
     }
 
-    @Override
     public List<Department> findAll() {
         return departmentDao.findAll();
     }
