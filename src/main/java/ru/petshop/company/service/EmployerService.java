@@ -9,9 +9,9 @@ import java.util.List;
  */
 public interface EmployerService {
 
-    Employer create(Employer employer);
+    Integer create(Employer employer);
+    Integer update(Employer employer);
     Employer findOne(int id);
-    Employer update(Employer employer);
     void delete(int id);
     List<Employer> findAll();
 

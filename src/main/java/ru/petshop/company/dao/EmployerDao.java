@@ -10,8 +10,8 @@ import java.util.List;
  */
 public interface EmployerDao {
 
-    Employer create(Employer department);
-    Employer update(Employer department);
+    Integer create(Employer department);
+    Integer update(Employer department);
     Employer findOne(int id);
     void delete(int id);
     List<Employer> findAll();

@@ -9,8 +9,8 @@ import java.util.List;
  */
 public interface DepartmentDao {
 
-    Department create(Department department);
-    Department save(Department department);
+    Integer create(Department department);
+    Integer update(Department department);
     Department findOne(int id);
     void delete(int id);
     List<Department> findAll();

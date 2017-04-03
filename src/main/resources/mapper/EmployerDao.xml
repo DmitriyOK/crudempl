@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="ru.petshop.company.dao.EmployerDao">
-    <sql id="employerColumns">id, name, firstname, lastname, departmentId</sql>
+    <sql id="employerColumns">id, firstname, lastname, departmentId</sql>
     <select id="findOne" parameterType="int" resultType="Employer">
         select <include refid="employerColumns"/> from employer where id = #{id}
     </select>
+    <select id="findAll" resultType="Employer">
+        select <include refid="employerColumns"/> from employer
+    </select>
+
+    <insert id="create">
+        INSERT INTO employer (firstname, lastname, departmentid) VALUES (#{firstName}, #{lastName},#{departmentId})
+    </insert>
+    
+    <update id="update">
+        UPDATE employer SET firstname = #{firstName}, lastname = #{lastName}, departmentId = #{departmentId}
+        WHERE id = #{id}
+    </update>
+    
+    <delete id="delete">
+        DELETE FROM employer WHERE id = #{id}
+    </delete>
+    
 </mapper>

@@ -16,13 +16,13 @@ public class DepartmentServiceImpl implements DepartmentService {
     DepartmentDao departmentDao;
 
     @Override
-    public Department create(Department department) {
+    public Integer create(Department department) {
         return departmentDao.create(department);
     }
 
     @Override
-    public Department update(Department department) {
-        return departmentDao.save(department);
+    public Integer update(Department department) {
+        return departmentDao.update(department);
     }
 
     @Override

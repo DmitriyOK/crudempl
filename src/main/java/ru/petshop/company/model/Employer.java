@@ -3,26 +3,26 @@ package ru.petshop.company.model;
 
 public class Employer {
 
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
-    private int departmentId;
+    private Integer departmentId;
 
     public Employer() {
     }
 
-    public Employer(int id, String firstName, String lastName, int departmentId) {
+    public Employer(Integer id, String firstName, String lastName, Integer departmentId) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.departmentId = departmentId;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -42,11 +42,11 @@ public class Employer {
         this.lastName = lastName;
     }
 
-    public int getDepartmentId() {
+    public Integer getDepartmentId() {
         return departmentId;
     }
 
-    public void setDepartmentId(int departmentId) {
+    public void setDepartmentId(Integer departmentId) {
         this.departmentId = departmentId;
     }
 

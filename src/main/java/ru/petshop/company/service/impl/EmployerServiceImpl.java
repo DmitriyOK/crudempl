@@ -16,23 +16,23 @@ public class EmployerServiceImpl implements EmployerService {
     EmployerDao employerDao;
 
     @Override
-    public Employer create(Employer employer) {
+    public Integer create(Employer employer) {
         return employerDao.create(employer);
     }
 
     @Override
     public Employer findOne(int id) {
-        return null;
-    }
-
-    @Override
-    public Employer update(Employer employer) {
-        return employerDao.update(employer);
+        return employerDao.findOne(id);
     }
 
     @Override
     public void delete(int id) {
-         employerDao.delete(id);
+        employerDao.delete(id);
+    }
+
+    @Override
+    public Integer update(Employer employer) {
+        return employerDao.update(employer);
     }
 
     @Override

@@ -11,6 +11,12 @@
 
     <context:component-scan base-package="ru.petshop.company" />
 
+
     <bean id="employerService" class="ru.petshop.company.service.impl.EmployerServiceImpl"/>
     <bean id="departmentService" class="ru.petshop.company.service.impl.DepartmentServiceImpl"/>
+
+    <bean id="jsonConverter"
+          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+          <property name="supportedMediaTypes" value="application/json" />
+    </bean>
 </beans>

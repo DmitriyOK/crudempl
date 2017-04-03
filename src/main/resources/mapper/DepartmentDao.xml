@@ -5,4 +5,21 @@
     <select id="findOne" parameterType="int" resultType="Department">
         select <include refid="departmentColumns"/> from department where id = #{id}
     </select>
+
+    <select id="findAll" resultType="Department">
+        select <include refid="departmentColumns"/> from department
+    </select>
+    
+    <insert id="create">
+        INSERT INTO department (name) VALUES (#{name})
+    </insert>
+
+    <insert id="update">
+        UPDATE department SET name = #{name} WHERE id = #{id}
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM department WHERE id = #{id}
+    </delete>
+
 </mapper>
